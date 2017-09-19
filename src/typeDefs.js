@@ -18,6 +18,7 @@ export default `
 
   type Project {
     id: ID!
+    name: String
     submittals: SubmittalValue
     meetings: MeetingValue
   }

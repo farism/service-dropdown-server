@@ -1,10 +1,8 @@
-import db from './db'
+import { Project } from './db'
 
-const resolvers = {
+export default {
   Query: {
-    company: (_, { id }) => ({}),
-    project: (_, { id }) => {
-      console.log(_, id)
-    }
+    company: (_) => ({}),
+    project: (_, args) => Project.findById(args.id),
   },
 }
